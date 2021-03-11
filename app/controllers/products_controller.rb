@@ -2,13 +2,22 @@ class ProductsController < ApplicationController
    
 
     def index
-        if params[:category_id]
-            @category = Category.includes(:products).find(params[:category_id])
+        
+
+        if params[:category]
+
+            @category = Category.includes(:products).find(params[:id])
             @products = @category.products
+
             
-        else
-            products = Product.all
-            render json: products
+            
+        ##else
+            #@products = Product.all
+            #if @products
+              ##  @products
+            #else
+              ##  render :json => { :error => 'products not found' }, :status => 422 if @products.nil?
+            ##end
         end
     end
 end
