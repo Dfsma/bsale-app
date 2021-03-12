@@ -6,13 +6,13 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :products
       resources :categories
-      
+      resources :searchs 
     end
   end
 
   
 
-  ##** todo: intentar que el paramentro category_id solo sea "id" **##
+  ##** todo: intentar que el paramentro "category_id" solo sea "id" **##
   #resources :categories do
   #  resources :products,  only: :index
   #end

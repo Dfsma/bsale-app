@@ -1,7 +1,8 @@
 class Api::V1::ProductsController < ApplicationController
-   
 
-    def index  
+    def index
+      ## Obtener todos los productos y validar si estos existen.
+      ## Caso contrario enviar la respuesta http apropiada.  
       @products = Product.all
       if @products
         @products
@@ -15,4 +16,5 @@ class Api::V1::ProductsController < ApplicationController
         #@products = Product.where(Category: @category.id)
       #end   
     end
+    
 end
