@@ -11,7 +11,7 @@ json.data @products do |product|
     json.discount product.discount
 
     json.category do
-        json.partial! 'categories/category', category: product.category
+        json.partial! 'api/v1/categories/category', category: product.category
     end
 
 end
