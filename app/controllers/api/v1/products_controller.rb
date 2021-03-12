@@ -1,8 +1,8 @@
 class Api::V1::ProductsController < ApplicationController
 
     def index
-      ## Obtener todos los productos y validar si estos existen.
-      ## Caso contrario enviar la respuesta http apropiada.  
+      ##** Obtener todos los productos y validar si estos existen.
+      ##** Caso contrario enviar la respuesta http apropiada.  
       @products = Product.all
       if @products
         @products
@@ -17,4 +17,10 @@ class Api::V1::ProductsController < ApplicationController
       #end   
     end
     
+    
+    def paginate
+      ##** Utilizo la gema will_paginate para traer 4 productos por pagina.
+      @products = Product.paginate(page: params[:page], per_page: 4) #will_paginate
+     
+    end
 end

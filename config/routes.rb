@@ -4,7 +4,9 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      resources :products
+      resources :products do 
+        get 'page/:page', action: :paginate, on: :collection
+      end
       resources :categories
       resources :searchs 
     end
