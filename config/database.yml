@@ -13,10 +13,10 @@ default: &default
   adapter: mysql2
   encoding: utf8mb4
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  database: bsale_test
-  username: bsale_test
-  password: bsale_test
-  host: mdb-test.c6vunyturrl6.us-west-1.rds.amazonaws.com
+  database: ENV['SECRET_DATABASE']
+  username: ENV['SECRET_USERNAME']
+  password: ENV['SECRET_PASSWORD']
+  host: ENV['SECRET_HOST']
 
 development:
   <<: *default
