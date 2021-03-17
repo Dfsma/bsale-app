@@ -19,6 +19,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'rack-cors'
 gem 'faker', '~> 1.9.1', group: [:development, :test]
 gem 'will_paginate', '~> 3.1.0'
+gem 'dotenv-rails'
 
 #################
 #gem 'jsonapi-serializer'
