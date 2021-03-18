@@ -1,5 +1,8 @@
 class Api::V1::ProductsController < ApplicationController
 
+    
+
+
     def index
       ##** Obtener todos los productos y validar si estos existen.
       ##** Caso contrario enviar la respuesta http apropiada.  
