@@ -21,6 +21,7 @@ gem 'faker', '~> 1.9.1', group: [:development, :test]
 gem 'will_paginate', '~> 3.1.0'
 gem 'rswag'
 gem 'rspec-rails'
+
 #################
 #gem 'jsonapi-serializer'
 #gem 'active_model_serializers'
